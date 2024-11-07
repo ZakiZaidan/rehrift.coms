@@ -1,0 +1,94 @@
+header {
+    background: linear-gradient(109.6deg, rgb(44, 83, 131) 18.9%, rgb(95, 175, 201) 91.1%);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    color: white;
+  }
+
+  header .logo {
+    font-size: 30px;
+  }
+
+  /* Style untuk navbar */
+  .nav {
+    position: relative;
+  }
+
+  .nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-right: -500px;
+    display: flex;
+  }
+
+  .nav > ul > li {
+    position: relative;
+    
+  }
+
+  .nav > ul > li > a {
+    display: inline-block;
+    color: #fff;
+    padding: 10px;
+    margin: 0 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.3s;
+    border: 3px solid transparent;
+  }
+
+  .nav > ul > li > a:hover,
+  .nav > ul > li > a.active {
+    color: #0c0c0c;
+    border-bottom-color: #007bff;
+  }
+
+  /* Style untuk sub-menu */
+  .nav ul ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    min-width: 150px;
+    z-index: 1;
+    padding: 0;
+  }
+
+  .nav ul ul li {
+    display: block;
+  }
+
+  .nav ul ul a {
+    color: #333;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.2s;
+  }
+
+  .nav ul ul a:hover {
+    background-color: #f0f0f0;
+  }
+
+  /* Efek slide down */
+  .nav > ul > li:hover > ul {
+    display: block;
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
