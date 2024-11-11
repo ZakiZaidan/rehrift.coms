@@ -11,4 +11,4 @@ use App\Http\Controllers\PostController;
 Route::inertia('/', 'Home');
 Route::inertia('/h', 'clothes/baju');
 
-// Route::resource('/post', PostController::class);
+Route::resource('/post', PostController::class);
