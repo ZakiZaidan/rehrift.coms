@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Post;
+use App\Models\User;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
 
@@ -13,10 +13,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        // Here we provide posts from the database to prop that we created in component
-        return Inertia::render('Index', [
-            'posts' => Post::all()
-        ]);
+        $users = User::all();
+        return Inertia::render('Home', compact('users'));
     }
 
     /**

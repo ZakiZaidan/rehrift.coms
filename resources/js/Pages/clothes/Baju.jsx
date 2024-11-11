@@ -1,4 +1,4 @@
-export default function baju({posts}){
+export default function Baju({posts}){
     return (
         <>
         <h1>akowkoaw</h1>

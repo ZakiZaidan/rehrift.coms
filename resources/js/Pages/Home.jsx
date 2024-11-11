@@ -1,25 +1,23 @@
-import Button from "../Components/Button";
-import Nav from "../../Layouts/Nav";
-// export default function Home() {
-//     return <div>
-//         <Button>sss</Button>
-//         <Button>sss</Button>
-//         <Button>sss</Button>
-//         <Button>sss</Button>
-//         <Button>sss</Button>
-//         <Button>sss</Button>
-//         <Button>sss</Button>
-//         </div>
-// }
+import React from "react";
+import Nav from "../Layouts/Nav";
 
-function Home({ posts }) {
+function Home({ users }) {
     return (
-        <>
-    		<h1>hai</h1>
-			<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam quidem ipsum repellendus vel provident! Debitis est praesentium molestiae atque quia cupiditate quibusdam accusantium exercitationem ratione voluptatibus. Minus, beatae asperiores. Natus!</p>
-       </>
-    )
+        <Nav>
+            <div className="text-white flex flex-col items-center justify-center w-full max-w-4xl mx-auto">
+                <h1 className="text-2xl font-bold mb-4">Latest user</h1>
+                {users.map((user) => (
+                    <div
+                        key={user.id}
+                        className="bg-gray-800 p-4 rounded-lg mb-4 w-full"
+                    >
+                        <h2 className="text-xl font-semibold">{user.name}</h2>
+                        <p className="mt-2">{user.email}</p>
+                    </div>
+                ))}
+            </div>
+        </Nav>
+    );
 }
 
-Home.Nav =  page =><Nav children={page} />
 export default Home;
